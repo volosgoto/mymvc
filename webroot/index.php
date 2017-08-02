@@ -7,6 +7,7 @@ $uri = $_SERVER['REQUEST_URI'];
    
 echo 'Главня страница' . '<br>';
 print_r($uri);
+//
 
 
 ?>
