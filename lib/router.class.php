@@ -23,9 +23,6 @@ class Router {
     }
 
    public function __construct($uri){
-        print_r('OK. Router was calld with uri: ' . $uri);
+        print_r('OK. Router was called with uri: ' . $uri);
    }
 }
-
-
-?>

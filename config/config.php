@@ -1,3 +1,2 @@
 <?php
-Config::get('site name', 'your site');
-?>
+Config::get('site name');

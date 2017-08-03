@@ -11,5 +11,3 @@ class Config {
         return self::$settings[$key] = $value;
     }
 }
-
-?>

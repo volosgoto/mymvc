@@ -20,4 +20,3 @@ function __autoload($class_name){
             throw new ErrorException('Failed to include class: ' . $class_name);
         }
 }
-?>
