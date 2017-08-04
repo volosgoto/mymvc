@@ -56,7 +56,11 @@ class Router {
 
         // Получаем путь
         $path = $uri_parts[0];
-        $path_parts = explode('/', $path);
+        $path_parts = explode('/', $path); // Массив.
+
+        // Костыль. Если проект развернут не в корне сайта, то удаляем 0 элемент массива.
+        // Если проект развернут в корне, то не делаем unset
+        unset($path_parts[0]);
 
 //        echo "<pre>";
 //            print_r($path_parts);
@@ -72,7 +76,7 @@ class Router {
                 $this->language = strtolower(current($path_parts));
                 array_shift($path_parts);
             }
-            // Получить контроллер
+            // Получить Контроллер
             if (current($path_parts)) {
                 $this->controller = strtolower(current($path_parts));
                 array_shift($path_parts);
@@ -88,5 +92,4 @@ class Router {
         }
 
     }
-
 }
